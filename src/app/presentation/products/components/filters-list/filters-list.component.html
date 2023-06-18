@@ -1,0 +1,5 @@
+<div class="container">
+  <p *ngFor="let filter of filters">
+    <mat-checkbox (click)="updateStatus(filter)" [checked]="filter.selected">{{filter.type}}</mat-checkbox>
+  </p>
+</div>

@@ -1,0 +1,12 @@
+<div class="header">
+  <div class="name">Name</div>
+  <div class="type">Type</div>
+  <div class="country">Country</div>
+  <div class="price">Price</div>
+</div>
+<div class="product" *ngFor="let product of products">
+  <div class="name">{{product.name}}</div>
+  <div class="type">{{product.type}}</div>
+  <div class="country">{{product.country}}</div>
+  <div class="price">{{product.price}}</div>
+</div>

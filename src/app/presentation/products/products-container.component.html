@@ -1,0 +1,15 @@
+<ng-container
+  *ngIf="{filters:filters$|async, filteredProducts :filteredProducts$|async, status:productsStatus$|async} as datas">
+  <div class="container" *ngIf="datas.status==='LOADED'; else spinner ">
+    <app-filter-list class="filter" (updateFilterStatus)="updateFilterStatus($event)"
+                     [filters]="datas.filters"></app-filter-list>
+    <app-filtered-products class="products" [products]="datas.filteredProducts"></app-filtered-products>
+  </div>
+  <ng-template #spinner>
+    <div class="spinner">
+      <mat-spinner ></mat-spinner>
+    </div>
+  </ng-template>
+</ng-container>
+
+
